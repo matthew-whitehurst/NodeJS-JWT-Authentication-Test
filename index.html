@@ -24,7 +24,7 @@
             <div>
                 <button onclick="login()">Login</button>
                 <button onclick="getDashboard()">Get Dashboard</button>
-                <button onclick="getSettings()">Get Settings</button>
+                <button onclick="settings()">Get Settings</button>
             </div>
         </main>
     </div>
@@ -63,7 +63,7 @@
             });
         }
 
-        function getSettings() {
+        function settings() {
             const token = localStorage.getItem('jwt');
             axios.get('/api/settings', {
                 headers: {
@@ -78,6 +78,5 @@
             });
         }
     </script>
-
 </body>
 </html>
